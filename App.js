@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -10,14 +10,18 @@ import { COLORS } from './src/constants/theme';
 
 const Stack = createStackNavigator();
 
+const appTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: COLORS.background,
+  },
+};
+
 export default function App() {
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={{
-        colors: {
-          background: COLORS.background,
-        }
-      }}>
+      <NavigationContainer theme={appTheme}>
         <StatusBar style="light" />
         <Stack.Navigator
           screenOptions={{

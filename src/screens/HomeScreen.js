@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: COLORS.surface,
         marginHorizontal: SPACING.sm,
-        ...SHADOWS.light,
+        ...(SHADOWS?.light || {}),
     },
     buttonSmall: {
         width: 44,

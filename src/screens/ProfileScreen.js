@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         padding: SPACING.md,
         borderRadius: SIZES.radius,
         marginBottom: SPACING.md,
-        ...SHADOWS.light,
+        ...(SHADOWS?.light || {}),
     },
     avatar: {
         width: 70,
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
         padding: SPACING.md,
         borderRadius: SIZES.radius,
         marginBottom: SPACING.md,
-        ...SHADOWS.light,
+        ...(SHADOWS?.light || {}),
     },
     locationRow: {
         flexDirection: 'row',
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     settingsCard: {
         backgroundColor: COLORS.surface,
         borderRadius: SIZES.radius,
-        ...SHADOWS.light,
+        ...(SHADOWS?.light || {}),
     },
     settingsItem: {
         flexDirection: 'row',

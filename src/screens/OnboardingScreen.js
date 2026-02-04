@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, FONTS, SIZES, SPACING } from '../constants/theme';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -32,12 +33,14 @@ const OnboardingScreen = ({ navigation }) => {
                             <Text style={styles.buttonText}>Get Started</Text>
                         </TouchableOpacity>
 
+                        {/* Login screen not implemented yet
                         <View style={styles.loginContainer}>
                             <Text style={styles.loginText}>Already have an account? </Text>
                             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                                 <Text style={styles.loginLink}>Log In</Text>
                             </TouchableOpacity>
                         </View>
+                        */}
                     </SafeAreaView>
                 </LinearGradient>
             </ImageBackground>

@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.radius * 2,
         overflow: 'hidden',
         backgroundColor: COLORS.surface,
-        ...SHADOWS.medium,
+        ...((SHADOWS && SHADOWS.medium) ? SHADOWS.medium : {}),
     },
     image: {
         width: '100%',

@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.radius,
         padding: SPACING.md,
         marginBottom: SPACING.md,
-        ...SHADOWS.light,
+        ...(SHADOWS?.light || {}),
     },
     cardTop: {
         flexDirection: 'row',
